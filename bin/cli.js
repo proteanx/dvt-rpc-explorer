@@ -8,7 +8,7 @@ const args = require('meow')(`
       -p, --port <port>              port to bind http server [default: 3002]
       -i, --host <host>              host to bind http server [default: 127.0.0.1]
       -a, --basic-auth-password <..> protect web interface with a password [default: no password]
-      -C, --coin <coin>              crypto-coin to enable [default: BCH]
+      -C, --coin <coin>              crypto-coin to enable [default: DVT]
 
       -b, --bitcoind-uri <uri>       connection URI for bitcoind rpc (overrides the options below)
       -H, --bitcoind-host <host>     hostname for bitcoind rpc [default: 127.0.0.1]
@@ -36,15 +36,15 @@ const args = require('meow')(`
       -v, --version                  output version number
 
     Examples
-      $ bch-rpc-explorer --port 8080 --bitcoind-port 18443 --bitcoind-cookie ~/.bitcoin/regtest/.cookie
-      $ bch-rpc-explorer -p 8080 -P 18443 -c ~/.bitcoin/regtest.cookie
+      $ dvt-rpc-explorer --port 8080 --bitcoind-port 18443 --bitcoind-cookie ~/.bitcoin/regtest/.cookie
+      $ dvt-rpc-explorer -p 8080 -P 18443 -c ~/.bitcoin/regtest.cookie
 
     Or using connection URIs
-      $ bch-rpc-explorer -b bitcoin://bob:myPassword@127.0.0.1:18443/
-      $ bch-rpc-explorer -b bitcoin://127.0.0.1:18443/?cookie=$HOME/.bitcoin/regtest/.cookie
+      $ dvt-rpc-explorer -b bitcoin://bob:myPassword@127.0.0.1:18443/
+      $ dvt-rpc-explorer -b bitcoin://127.0.0.1:18443/?cookie=$HOME/.bitcoin/regtest/.cookie
 
     All options may also be specified as environment variables
-      $ BTCEXP_PORT=8080 BTCEXP_BITCOIND_PORT=18443 BTCEXP_BITCOIND_COOKIE=~/.bitcoin/regtest/.cookie bch-rpc-explorer
+      $ BTCEXP_PORT=8080 BTCEXP_BITCOIND_PORT=18443 BTCEXP_BITCOIND_COOKIE=~/.bitcoin/regtest/.cookie dvt-rpc-explorer
 
 
 `, { flags: { port: {alias:'p'}, host: {alias:'i'}, basicAuthPassword: {alias:'a'}, coin: {alias:'C'}

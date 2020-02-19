@@ -7,7 +7,7 @@ var path = require('path');
 var dotenv = require("dotenv");
 var fs = require('fs');
 
-var configPaths = [ path.join(os.homedir(), '.config', 'bch-rpc-explorer.env'), path.join(process.cwd(), '.env') ];
+var configPaths = [ path.join(os.homedir(), '.config', 'dvt-rpc-explorer.env'), path.join(process.cwd(), '.env') ];
 configPaths.filter(fs.existsSync).forEach(path => {
   console.log('Loading env file:', path);
   dotenv.config({ path });
@@ -16,10 +16,10 @@ configPaths.filter(fs.existsSync).forEach(path => {
 // debug module is already loaded by the time we do dotenv.config
 // so refresh the status of DEBUG env var
 var debug = require("debug");
-debug.enable(process.env.DEBUG || "bchexp:app,bchexp:error");
+debug.enable(process.env.DEBUG || "dvtexp:app,dvtexp:error");
 
-var debugLog = debug("bchexp:app");
-var debugPerfLog = debug("bchexp:actionPerformace");
+var debugLog = debug("dvtexp:app");
+var debugPerfLog = debug("dvtexp:actionPerformace");
 
 var express = require('express');
 var favicon = require('serve-favicon');

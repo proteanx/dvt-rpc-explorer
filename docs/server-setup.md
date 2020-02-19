@@ -1,4 +1,4 @@
-### Setup of bch-rpc-explorer on Ubuntu 18.04 server
+### Setup of dvt-rpc-explorer on Ubuntu 18.04 server
 
     sudo add-apt-repository ppa:certbot/certbot
     curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
@@ -12,11 +12,11 @@
     sudo npm install pm2 --global
     apt install python-certbot-nginx
 
-Copy content from [./bch-explorer.conf](./bch-explorer.conf) into `/etc/nginx/sites-available/bch-explorer.conf`
+Copy content from [./dvt-explorer.conf](./dvt-explorer.conf) into `/etc/nginx/sites-available/dvt-explorer.conf`
 
-    certbot --nginx -d bch-explorer.com #use your domain name here
+    certbot --nginx -d dvt-explorer.com #use your domain name here
     cd /home/bitcoin
     git clone https://github.com/proteanx/dvt-rpc-explorer.git
-    cd /home/bitcoin/bch-rpc-explorer
+    cd /home/bitcoin/dvt-rpc-explorer
     npm install
-    pm2 start bin/www --name "bch-rpc-explorer"
+    pm2 start bin/www --name "dvt-rpc-explorer"

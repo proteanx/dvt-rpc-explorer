@@ -1,7 +1,7 @@
-var bch = require("./coins/bch.js");
+var dvt = require("./coins/dvt.js");
 
 module.exports = {
-  "BCH": bch,
+  "DVT": dvt,
 
-  "coins":["BCH"]
+  "coins":["DVT"]
 };

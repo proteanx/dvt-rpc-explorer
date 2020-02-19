@@ -5,7 +5,7 @@ var url = require('url');
 var coins = require("./coins.js");
 var credentials = require("./credentials.js");
 
-var currentCoin = process.env.BTCEXP_COIN || "BCH";
+var currentCoin = process.env.BTCEXP_COIN || "DVT";
 
 var rpcCred = credentials.rpc;
 
@@ -52,7 +52,7 @@ var siteToolsAux = '[ \
   {"name":"Transaction Stats", "url":"/tx-stats", "desc":"See graphs of total transaction volume and transaction rates.", "fontawesome":"fas fa-chart-bar"}, \
   {"name":"Mempool Summary", "url":"/mempool-summary", "desc":"Detailed summary of the current mempool for this node.", "fontawesome":"fas fa-clipboard-list"}, \
   {"name":"Unconfirmed Transactions", "url":"/unconfirmed-tx", "desc":"Browse unconfirmed/pending transactions.", "fontawesome":"fas fa-unlock-alt"}, \
-  {"name":"Bitcoin Cash Fun", "url":"/fun", "desc":"See fun/interesting historical blockchain data.", "fontawesome":"fas fa-certificate"} \
+  {"name":"DeVault Fun", "url":"/fun", "desc":"See fun/interesting historical blockchain data.", "fontawesome":"fas fa-certificate"} \
 ]'
 
 var siteToolsJSON = JSON.parse(siteToolsAux)
@@ -170,11 +170,9 @@ module.exports = {
         {
           title:"Related Sites",
           links:[
-            // TODO: find better images for this URLs, in the mean time use bch.svg
-            {name: "Bitcoin Unlimited", url:"https://bitcoinunlimited.info", imgUrl:"/img/logo/bu.png"},
-            {name: "Bitcoin Cash Nodes", url:"https://cashnodes.io", imgUrl:"/img/logo/bch.svg"},
-            {name: "BCH PoW Monitoring", url:"https://fork.lol", imgUrl:"/img/logo/fork.png"},
-            {name: "BCH Specification", url:"https://reference.cash", imgUrl:"/img/logo/refcash.ico"},
+            // TODO: find better images for this URLs, in the mean time use dvt.svg
+            {name: "DeVault Main Site", url:"https://devault.cc", imgUrl:"/img/logo/devault.png"},
+            {name: "DeVault Online", url:"https://devault.online", imgUrl:"/img/logo/dvt.svg"},
           ]
         }
       ]
@@ -187,10 +185,10 @@ module.exports = {
 
   donations:{
     addresses:{
-      coins:["BCH"],
-      sites:{"BCH":"https://bitcoinunlimited.info"},
+      coins:["DVT"],
+      sites:{"DVT":"https://devault.cc"},
 
-      "BCH":{address:"bitcoincash:pq6snv5fcx2fp6dlzg7s0m9zs8yqh74335tzvvfcmq"}
+      "DVT":{address:"devault:qrt2ysz6hmkcndf6086q5v63lzgkmlf7egyxs8r3y8"}
     }
   }
 };

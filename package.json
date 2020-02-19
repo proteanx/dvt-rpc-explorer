@@ -1,7 +1,7 @@
 {
-  "name": "bch-rpc-explorer",
+  "name": "dvt-rpc-explorer",
   "version": "0.0.2",
-  "description": "Self-hosted Bitcoin Cash blockchain explorer",
+  "description": "Self-hosted DeVault blockchain explorer",
   "private": false,
   "bin": "bin/cli.js",
   "scripts": {

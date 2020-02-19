@@ -1,7 +1,7 @@
 var debug = require("debug");
 
-var debugLog = debug("bchexp:utils");
-var debugErrorLog = debug("bchexp:error");
+var debugLog = debug("dvtexp:utils");
+var debugErrorLog = debug("dvtexp:error");
 
 var Decimal = require("decimal.js");
 var request = require("request");

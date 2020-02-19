@@ -1,9 +1,9 @@
-# BCH RPC Explorer
+# DVT RPC Explorer
 
 [![npm version][npm-ver-img]][npm-ver-url] [![NPM downloads][npm-dl-img]][npm-dl-url]
 
 
-Simple, database-free Bitcoin Cash blockchain explorer, via RPC. Built with Node.js, express, bootstrap-v4.
+Simple, database-free DeVault blockchain explorer, via RPC. Built with Node.js, express, bootstrap-v4.
 
 This tool is intended to be a simple, self-hosted explorer for the Bitcoin blockchain, driven by RPC calls to your own bitcoind node. This tool is easy to run but currently lacks features compared to database-backed explorers.
 
@@ -28,7 +28,7 @@ See [CHANGELOG.md](/CHANGELOG.md).
 
 # Getting started
 
-The below instructions are geared toward BCH, but can be adapted easily to other coins.
+The below instructions are geared toward DVT, but can be adapted easily to other coins.
 
 ## Prerequisites
 
@@ -40,8 +40,8 @@ The below instructions are geared toward BCH, but can be adapted easily to other
 ## Instructions
 
 ```bash
-npm install -g bch-rpc-explorer
-bch-rpc-explorer
+npm install -g dvt-rpc-explorer
+dvt-rpc-explorer
 ```
 
 If you're running on mainnet with the default datadir and port, this Should Just Work.
@@ -53,30 +53,30 @@ See [configuration](#configuration) for details.
 ### Configuration
 
 Configuration options may be passed as environment variables
-or by creating an env file at `~/.config/bch-rpc-explorer.env`
+or by creating an env file at `~/.config/dvt-rpc-explorer.env`
 or at `.env` in the working directory.
 See [.env-sample](.env-sample) for a list of the options and details for formatting `.env`.
 
 You may also pass options as CLI arguments, for example:
 
 ```bash
-bch-rpc-explorer --port 8080 --bitcoind-port 18443 --bitcoind-cookie ~/.bitcoin/regtest/.cookie
+dvt-rpc-explorer --port 8080 --bitcoind-port 18443 --bitcoind-cookie ~/.bitcoin/regtest/.cookie
 ```
 
-See `bch-rpc-explorer --help` for the full list of CLI options.
+See `dvt-rpc-explorer --help` for the full list of CLI options.
 
 ## Run via Docker
 
-1. `docker build -t bch-rpc-explorer .`
-2. `docker run -p 3002:3002 -it bch-rpc-explorer`
+1. `docker build -t dvt-rpc-explorer .`
+2. `docker run -p 3002:3002 -it dvt-rpc-explorer`
 
 # Support
 
-* [bitcoincash:pq6snv5fcx2fp6dlzg7s0m9zs8yqh74335tzvvfcmq](bitcoincash:pq6snv5fcx2fp6dlzg7s0m9zs8yqh74335tzvvfcmq)
+* [devault:qrt2ysz6hmkcndf6086q5v63lzgkmlf7egyxs8r3y8](devault:qrt2ysz6hmkcndf6086q5v63lzgkmlf7egyxs8r3y8)
 
 
-[npm-ver-img]: https://img.shields.io/npm/v/bch-rpc-explorer.svg?style=flat
-[npm-ver-url]: https://www.npmjs.com/package/bch-rpc-explorer
-[npm-dl-img]: http://img.shields.io/npm/dm/bch-rpc-explorer.svg?style=flat
-[npm-dl-url]: https://npmcharts.com/compare/bch-rpc-explorer?minimal=true
+[npm-ver-img]: https://img.shields.io/npm/v/dvt-rpc-explorer.svg?style=flat
+[npm-ver-url]: https://www.npmjs.com/package/dvt-rpc-explorer
+[npm-dl-img]: http://img.shields.io/npm/dm/dvt-rpc-explorer.svg?style=flat
+[npm-dl-url]: https://npmcharts.com/compare/dvt-rpc-explorer?minimal=true
 

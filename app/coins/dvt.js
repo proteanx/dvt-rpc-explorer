@@ -4,32 +4,18 @@ Decimal8 = Decimal.clone({ precision:8, rounding:8 });
 var currencyUnits = [
   {
     type:"native",
-    name:"BCH",
+    name:"DVT",
     multiplier:1,
     default:true,
-    values:["", "bch", "BCH"],
+    values:["", "dvt", "DVT"],
     decimalPlaces:8
   },
   {
     type:"native",
-    name:"mBCH",
+    name:"Spock",
     multiplier:1000,
-    values:["mbch"],
+    values:["spock"],
     decimalPlaces:5
-  },
-  {
-    type:"native",
-    name:"bits",
-    multiplier:1000000,
-    values:["bits"],
-    decimalPlaces:2
-  },
-  {
-    type:"native",
-    name:"sat",
-    multiplier:100000000,
-    values:["sat", "satoshi"],
-    decimalPlaces:0
   },
   {
     type:"exchanged",
@@ -50,12 +36,12 @@ var currencyUnits = [
 ];
 
 module.exports = {
-  name:"Bitcoin Cash",
-  ticker:"BCH",
-  logoUrl:"/img/logo/bch.svg",
-  siteTitle:"Bitcoin Cash Explorer",
-  siteDescriptionHtml:"<b>BCH Explorer</b> is <a href='https://github.com/sickpig/bch-rpc-explorer). If you run your own [Bitcoin Cash Full Node](https://www.bitcoincash.org/nodes.html), **BCH Explorer** can easily run alongside it, communicating via RPC calls. See the project [ReadMe](https://github.com/sickpig/bch-rpc-explorer) for a list of features and instructions for running.",
-  nodeTitle:"Bitcoin Cash Full Node",
+  name:"DeVault",
+  ticker:"DVT",
+  logoUrl:"/img/logo/dvt.svg",
+  siteTitle:"DeVault Explorer",
+  siteDescriptionHtml:"<b>DVT Explorer</b> is <a href='https://github.com/proteanx/dvt-rpc-explorer). If you run your own [DeVault Full Node](https://www.bitcoincash.org/nodes.html), **DVT Explorer** can easily run alongside it, communicating via RPC calls. See the project [ReadMe](https://github.com/proteanx/dvt-rpc-explorer) for a list of features and instructions for running.",
+  nodeTitle:"DeVault Full Node",
   nodeUrl:"https://bitcoinunlimited.info/download",
   demoSiteUrl: "https://explorer.bitcoinunlimited.info",
   miningPoolsConfigUrls:[
@@ -65,7 +51,7 @@ module.exports = {
   maxBlockWeight: 4000000,
   targetBlockTimeSeconds: 600,
   currencyUnits:currencyUnits,
-  currencyUnitsByName:{"BCH":currencyUnits[0], "mBCH":currencyUnits[1], "bits":currencyUnits[2], "sat":currencyUnits[3]},
+  currencyUnitsByName:{"DVT":currencyUnits[0], "mDVT":currencyUnits[1], "bits":currencyUnits[2], "sat":currencyUnits[3]},
   baseCurrencyUnit:currencyUnits[3],
   defaultCurrencyUnit:currencyUnits[0],
   feeSatoshiPerByteBucketMaxima: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 50, 75, 100, 150],
@@ -186,7 +172,7 @@ module.exports = {
       chain: "main",
       blockHeight: 0,
       blockHash: "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
-      summary: "The Bitcoin Cash Genesis Block.",
+      summary: "The DeVault Genesis Block.",
       alertBodyHtml: "This is the first block in the Bitcoin blockchain, known as the 'Genesis Block'. This block was mined by Bitcoin's creator Satoshi Nakamoto. You can read more about <a href='https://en.bitcoin.it/wiki/Genesis_block'>the genesis block</a>.",
       referenceUrl: "https://en.bitcoin.it/wiki/Genesis_block"
     },
@@ -328,21 +314,21 @@ module.exports = {
   exchangeRateData:{
     // see https://www.kraken.com/features/api#get-ticker-info for doc on that API
     // endoint. What we need in "jq" syntax is:
-    // jq ."result"."BCHUSD"."c"[0] and jq ."result"."BCHEUR"."c"[0]
+    // jq ."result"."DVTUSD"."c"[0] and jq ."result"."DVTEUR"."c"[0]
     // the above will return back the last trade closed at the time the url
     // has been fetched
-    jsonUrl:"https://api.kraken.com/0/public/Ticker?pair=BCHUSD,BCHEUR",
+    jsonUrl:"https://api.kraken.com/0/public/Ticker?pair=DVTUSD,DVTEUR",
     responseBodySelectorFunction:function(responseBody) {
       //console.log("Exchange Rate Response: " + JSON.stringify(responseBody));
 
-      var exchangedCurrencies = ["BCHUSD", "BCHEUR"];
+      var exchangedCurrencies = ["DVTUSD", "DVTEUR"];
 
       if (responseBody.result) {
         var exchangeRates = {};
 
         for (var i = 0; i < exchangedCurrencies.length; i++) {
           if (responseBody.result[exchangedCurrencies[i]]) {
-            var key = exchangedCurrencies[i].replace("BCH", "");
+            var key = exchangedCurrencies[i].replace("DVT", "");
             exchangeRates[key.toLowerCase()] = responseBody.result[exchangedCurrencies[i]]["c"][0];
           }
         }

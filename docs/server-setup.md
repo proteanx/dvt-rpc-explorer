@@ -16,7 +16,7 @@ Copy content from [./bch-explorer.conf](./bch-explorer.conf) into `/etc/nginx/si
 
     certbot --nginx -d bch-explorer.com #use your domain name here
     cd /home/bitcoin
-    git clone https://github.com/sickpig/bch-rpc-explorer.git
+    git clone https://github.com/proteanx/dvt-rpc-explorer.git
     cd /home/bitcoin/bch-rpc-explorer
     npm install
     pm2 start bin/www --name "bch-rpc-explorer"

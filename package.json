@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sickpig/bch-rpc-explorer.git"
+    "url": "git+https://github.com/proteanx/dvt-rpc-explorer.git"
   },
   "dependencies": {
     "async": "^3.1.0",

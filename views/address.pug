@@ -291,7 +291,7 @@ block content
               if (true)
                 if (addressApiError && addressApiError.error && addressApiError.error.code && addressApiError.error.code == -32600)
                   span Failed to retrieve transaction history from ElectrumX. See
-                  a(href="https://github.com/sickpig/bch-rpc-explorer/issues/67") Issue #67
+                  a(href="https://github.com/proteanx/dvt-rpc-explorer/issues/67") Issue #67
                   span  for more information.
 
 
@@ -302,12 +302,12 @@ block content
                   each err in addressDetailsErrors
                     if (err.e && err.e.error && err.e.error.message == "history too large")
                       span Failed to retrieve transaction history from ElectrumX. See
-                      a(href="https://github.com/sickpig/bch-rpc-explorer/issues/67") Issue #67
+                      a(href="https://github.com/proteanx/dvt-rpc-explorer/issues/67") Issue #67
                       span  for more information.
 
                     else if (err == "No address API configured")
                       span No address API is configured. See
-                      a(href="https://github.com/sickpig/bch-rpc-explorer/blob/master/.env-sample") the example configuration file
+                      a(href="https://github.com/proteanx/dvt-rpc-explorer/blob/master/.env-sample") the example configuration file
                       span  for help setting up an address API if desired.
 
                 else if (transactions.length == 0)

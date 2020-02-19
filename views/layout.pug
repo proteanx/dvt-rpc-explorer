@@ -145,16 +145,16 @@ html(lang="en")
             dl
               dt Source
               dd
-                a(href="https://github.com/sickpig/bch-rpc-explorer") github.com/sickpig/bch-rpc-explorer
+                a(href="https://github.com/proteanx/dvt-rpc-explorer") github.com/proteanx/dvt-rpc-explorer
 
                 if (global.sourcecodeProjectMetadata)
                   div(class="mt-2")
-                    a(href="https://github.com/sickpig/bch-rpc-explorer", class="btn btn-primary btn-sm mr-3 mb-1 text-decoration-none")
+                    a(href="https://github.com/proteanx/dvt-rpc-explorer", class="btn btn-primary btn-sm mr-3 mb-1 text-decoration-none")
                       i(class="fas fa-star mr-2")
                       span(class="mr-2") Star
                       span(class="badge bg-white text-dark") #{global.sourcecodeProjectMetadata.stargazers_count}
 
-                    a(href="https://github.com/sickpig/bch-rpc-explorer/fork", class="btn btn-primary btn-sm mr-3 mb-1 text-decoration-none")
+                    a(href="https://github.com/proteanx/dvt-rpc-explorer/fork", class="btn btn-primary btn-sm mr-3 mb-1 text-decoration-none")
                       i(class="fas fa-code-branch mr-2")
                       span(class="mr-2") Fork
                       span(class="badge bg-white text-dark") #{global.sourcecodeProjectMetadata.forks_count}
@@ -168,7 +168,7 @@ html(lang="en")
                   br
                   // the following is not a trailing spaces
                   span commit: 
-                    a(href=("https://github.com/sickpig/bch-rpc-explorer/commit/" + sourcecodeVersion)) #{sourcecodeVersion}
+                    a(href=("https://github.com/proteanx/dvt-rpc-explorer/commit/" + sourcecodeVersion)) #{sourcecodeVersion}
 
                 br
                 span released: #{sourcecodeDate}
@@ -185,7 +185,7 @@ html(lang="en")
                     a(href="https://btc-explorer.chaintools.io") https://btc-explorer.chaintools.io
 
                   div(class="mt-2")
-                    - var demoSiteCoins = ["BCH"];
+                    - var demoSiteCoins = ["DVT"];
                     each demoSiteCoin in demoSiteCoins
                       a(href=coinConfigs[demoSiteCoin].demoSiteUrl, class="mr-2", title=coinConfigs[demoSiteCoin].siteTitle)
                         img(src=("/img/logo/" + demoSiteCoin.toLowerCase() + ".svg"), alt=demoSiteCoin.toLowerCase())

@@ -22,7 +22,7 @@ var currencyUnits = [
     name:"USD",
     multiplier:"usd",
     values:["usd"],
-    decimalPlaces:2,
+    decimalPlaces:5,
     symbol:"$"
   },
   {
@@ -30,7 +30,7 @@ var currencyUnits = [
     name:"EUR",
     multiplier:"eur",
     values:["eur"],
-    decimalPlaces:2,
+    decimalPlaces:5,
     symbol:"€"
   },
 ];

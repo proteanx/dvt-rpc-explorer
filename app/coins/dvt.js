@@ -317,11 +317,11 @@ module.exports = {
     // jq ."result"."DVTUSD"."c"[0] and jq ."result"."DVTEUR"."c"[0]
     // the above will return back the last trade closed at the time the url
     // has been fetched
-    jsonUrl:"https://api.kraken.com/0/public/Ticker?pair=DVTUSD,DVTEUR",
+    jsonUrl:"https://api.coingecko.com/api/v3/simple/price?ids=devault&vs_currencies=usd%2Ceur",
     responseBodySelectorFunction:function(responseBody) {
       //console.log("Exchange Rate Response: " + JSON.stringify(responseBody));
 
-      var exchangedCurrencies = ["DVTUSD", "DVTEUR"];
+      var exchangedCurrencies = ["usd", "eur"];
 
       if (responseBody.result) {
         var exchangeRates = {};

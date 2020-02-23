@@ -12,9 +12,9 @@ var currencyUnits = [
   },
   {
     type:"native",
-    name:"Spock",
+    name:"spocks",
     multiplier:1000,
-    values:["spock"],
+    values:["spocks"],
     decimalPlaces:5
   },
   {
@@ -51,7 +51,7 @@ module.exports = {
   maxBlockWeight: 4000000,
   targetBlockTimeSeconds: 600,
   currencyUnits:currencyUnits,
-  currencyUnitsByName:{"DVT":currencyUnits[0], "mDVT":currencyUnits[1], "bits":currencyUnits[2], "sat":currencyUnits[3]},
+  currencyUnitsByName:{"DVT":currencyUnits[0], "spocks":currencyUnits[1], "bits":currencyUnits[2], "sat":currencyUnits[3]},
   baseCurrencyUnit:currencyUnits[3],
   defaultCurrencyUnit:currencyUnits[0],
   feeSatoshiPerByteBucketMaxima: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 50, 75, 100, 150],

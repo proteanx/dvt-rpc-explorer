@@ -40,10 +40,10 @@ module.exports = {
   ticker:"DVT",
   logoUrl:"/img/logo/dvt.svg",
   siteTitle:"DeVault Explorer",
-  siteDescriptionHtml:"<b>DVT Explorer</b> is <a href='https://github.com/proteanx/dvt-rpc-explorer). If you run your own [DeVault Full Node](https://www.bitcoincash.org/nodes.html), **DVT Explorer** can easily run alongside it, communicating via RPC calls. See the project [ReadMe](https://github.com/proteanx/dvt-rpc-explorer) for a list of features and instructions for running.",
+  siteDescriptionHtml:"<b>DVT Explorer</b> is <a href='https://github.com/proteanx/dvt-rpc-explorer). If you run your own [DeVault Full Node](https://www.github.com/devaultcrypto/devault), **DVT Explorer** can easily run alongside it, communicating via RPC calls. See the project [ReadMe](https://github.com/proteanx/dvt-rpc-explorer) for a list of features and instructions for running.",
   nodeTitle:"DeVault Full Node",
-  nodeUrl:"https://bitcoinunlimited.info/download",
-  demoSiteUrl: "https://explorer.bitcoinunlimited.info",
+  nodeUrl:"https://www.github.com/devaultcrypto/devault",
+  demoSiteUrl: "https://exploredvt.com",
   miningPoolsConfigUrls:[
     "https://raw.githubusercontent.com/btccom/Blockchain-Known-Pools/master/pools.json",
     "https://raw.githubusercontent.com/blockchain/Blockchain-Known-Pools/master/pools.json"
@@ -51,8 +51,8 @@ module.exports = {
   maxBlockWeight: 4000000,
   targetBlockTimeSeconds: 600,
   currencyUnits:currencyUnits,
-  currencyUnitsByName:{"DVT":currencyUnits[0], "spocks":currencyUnits[1], "bits":currencyUnits[2], "sat":currencyUnits[3]},
-  baseCurrencyUnit:currencyUnits[3],
+  currencyUnitsByName:{"DVT":currencyUnits[0], "spocks":currencyUnits[1]},
+  baseCurrencyUnit:currencyUnits[1],
   defaultCurrencyUnit:currencyUnits[0],
   feeSatoshiPerByteBucketMaxima: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 50, 75, 100, 150],
   genesisBlockHashesByNetwork:{

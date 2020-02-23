@@ -340,16 +340,22 @@ module.exports = {
     }
   },
 
-  blockRewardFunction:function(blockHeight, chain) {
-    var eras = [ new Decimal8(50) ];
-    for (var i = 1; i < 34; i++) {
-      var previous = eras[i - 1];
-      eras.push(new Decimal8(previous).dividedBy(2));
+blockRewardFunction:function(blockHeight, chain) {
+
+    const peakDiv = 2; // for 1/2 a year
+    const nPeakHeight = (chain == "testnet") ? 2400 : 131490; 
+    const nInitialReward = 500
+    const peak = nInitialReward + Math.floor(nInitialReward / peakDiv);
+
+    var nReward;
+
+    if (blockHeight <= nPeakHeight) {
+        nReward = (nInitialReward) + Math.floor((2 * nInitialReward * blockHeight) /
+                                                (3 * nPeakHeight + blockHeight));
+    } else {
+        nReward = Math.floor(nPeakHeight * peak / blockHeight);
     }
+    return nReward;
 
-    var halvingBlockInterval = (chain == "regtest" ? 150 : 210000);
-    var index = Math.floor(blockHeight / halvingBlockInterval);
-
-    return eras[index];
-  }
+}
 };

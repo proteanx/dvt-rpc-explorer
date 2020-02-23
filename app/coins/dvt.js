@@ -323,13 +323,13 @@ module.exports = {
 
       var exchangedCurrencies = ["usd", "eur"];
 
-      if (responseBody.result) {
+      if (responseBody.devault) {
         var exchangeRates = {};
 
         for (var i = 0; i < exchangedCurrencies.length; i++) {
-          if (responseBody.result[exchangedCurrencies[i]]) {
+          if (responseBody.devault[exchangedCurrencies[i]]) {
             var key = exchangedCurrencies[i].replace("DVT", "");
-            exchangeRates[key.toLowerCase()] = responseBody.result[exchangedCurrencies[i]]["c"][0];
+            exchangeRates[key.toLowerCase()] = responseBody.devault[exchangedCurrencies[i]];
           }
         }
 

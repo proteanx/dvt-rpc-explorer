@@ -179,7 +179,7 @@ block content
                     div(class="row")
                       div(class="summary-split-table-label") Balance
                       div(class="summary-split-table-content monospace")
-                        - var currencyValue = new Decimal(addressDetails.balanceSat).dividedBy(coinConfig.baseCurrencyUnit.multiplier);
+                        - var currencyValue = new Decimal(addressDetails.balanceSat).dividedBy(coinConfig.baseCurrencyUnit.multiplier)/100000;
                         include includes/value-display.pug
 
                   if (addressDetails && addressDetails.txCount)

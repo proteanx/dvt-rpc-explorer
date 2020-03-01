@@ -52,7 +52,7 @@ var siteToolsAux = '[ \
   {"name":"Transaction Stats", "url":"/tx-stats", "desc":"See graphs of total transaction volume and transaction rates.", "fontawesome":"fas fa-chart-bar"}, \
   {"name":"Mempool Summary", "url":"/mempool-summary", "desc":"Detailed summary of the current mempool for this node.", "fontawesome":"fas fa-clipboard-list"}, \
   {"name":"Unconfirmed Transactions", "url":"/unconfirmed-tx", "desc":"Browse unconfirmed/pending transactions.", "fontawesome":"fas fa-unlock-alt"}, \
-  {"name":"DeVault History", "url":"/fun", "desc":"See interesting historical blockchain data.", "fontawesome":"fas fa-certificate"} \
+  {"name":"DeVault History", "url":"/history", "desc":"See interesting historical blockchain data.", "fontawesome":"fas fa-certificate"} \
 ]'
 
 var siteToolsJSON = JSON.parse(siteToolsAux)

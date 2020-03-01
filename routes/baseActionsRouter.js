@@ -1211,7 +1211,7 @@ router.get("/changelog", function(req, res, next) {
   next();
 });
 
-router.get("/fun", function(req, res, next) {
+router.get("/history", function(req, res, next) {
   var sortedList = coins[config.coin].historicalData;
   sortedList.sort(function(a, b){
     return ((a.date > b.date) ? 1 : -1);

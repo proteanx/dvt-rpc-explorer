@@ -45,8 +45,6 @@ module.exports = {
   nodeUrl:"https://www.github.com/devaultcrypto/devault",
   demoSiteUrl: "https://exploredvt.com",
   miningPoolsConfigUrls:[
-    "https://raw.githubusercontent.com/btccom/Blockchain-Known-Pools/master/pools.json",
-    "https://raw.githubusercontent.com/blockchain/Blockchain-Known-Pools/master/pools.json"
   ],
   maxBlockWeight: 4000000,
   targetBlockTimeSeconds: 600,
@@ -54,14 +52,14 @@ module.exports = {
   currencyUnitsByName:{"DVT":currencyUnits[0], "spocks":currencyUnits[1]},
   baseCurrencyUnit:currencyUnits[1],
   defaultCurrencyUnit:currencyUnits[0],
-  feeSatoshiPerByteBucketMaxima: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 50, 75, 100, 150],
+  feeSatoshiPerByteBucketMaxima: [100, 150, 200],
   genesisBlockHashesByNetwork:{
-    "main":    "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+    "main":    "0000000038e62464371566f6a8d35c01aa54a7da351b2dbf85d92f30357f3a90",
     "test":    "000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943",
     "regtest": "0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206"
   },
   genesisCoinbaseTransactionIdsByNetwork: {
-    "main":    "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
+    "main":    "95d9f62f327ebae0d88f38c72224407e5dde5157f952cdb70921c2dda326f35b",
     "test":    "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
     "regtest": "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"
   },
@@ -168,105 +166,50 @@ module.exports = {
   historicalData: [
     {
       type: "blockheight",
-      date: "2009-01-03",
+      date: "2019-06-04",
       chain: "main",
       blockHeight: 0,
-      blockHash: "000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f",
+      blockHash: "0000000038e62464371566f6a8d35c01aa54a7da351b2dbf85d92f30357f3a90",
       summary: "The DeVault Genesis Block.",
-      alertBodyHtml: "This is the first block in the Bitcoin blockchain, known as the 'Genesis Block'. This block was mined by Bitcoin's creator Satoshi Nakamoto. You can read more about <a href='https://en.bitcoin.it/wiki/Genesis_block'>the genesis block</a>.",
+      alertBodyHtml: "This is the first block in the DeVault blockchain, known as the 'Genesis Block'.",
       referenceUrl: "https://en.bitcoin.it/wiki/Genesis_block"
     },
     {
       type: "tx",
-      date: "2009-01-03",
+      date: "2019-06-04",
       chain: "main",
-      txid: "4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b",
-      summary: "The coinbase transaction of the Genesis Block.",
-      alertBodyHtml: "This transaction doesn't really exist! This is the coinbase transaction of the <a href='/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f'>Bitcoin Genesis Block</a>. For more background about this special-case transaction, you can read <a href='https://github.com/bitcoin/bitcoin/issues/3303'>this brief discussion</a> among some of the <a href='https://bitcoin.org'>Bitcoin</a> developers.",
-      referenceUrl: "https://github.com/bitcoin/bitcoin/issues/3303"
-    },
-    {
-      type: "tx",
-      date: "2009-10-12",
-      chain: "main",
-      txid: "7dff938918f07619abd38e4510890396b1cef4fbeca154fb7aafba8843295ea2",
-      summary: "First bitcoin traded for fiat currency.",
-      alertBodyHtml: "In this first-known BTC-to-fiat transaction, 5,050 BTC were exchanged for 5.02 USD, at an effective exchange rate of ~0.001 USD/BTC.",
-      referenceUrl: "https://twitter.com/marttimalmi/status/423455561703624704"
+      txid: "b066c14a6e537fb3c2e7fe60cbb596769f6d53e0bbca1162c06344e4a6850ba6",
+      summary: "First transaction.",
+      alertBodyHtml: "The first non-coinbase DeVault transaction. (a miner payout tx from MineDVT.com)",
+      referenceUrl: ""
     },
     {
       type: "blockheight",
-      date: "2017-08-01",
+      date: "2019-07-06",
       chain: "main",
-      blockHeight: 478559,
-      blockHash: "0000000000000000011865af4122fe3b144e2cbeea86142e8ff2fb4107352d43",
-      summary: "First block after UAHF.",
-      referenceUrl: "https://twitter.com/btcfork/status/892449023893831680"
-    },
-    {
-      type: "tx",
-      date: "2014-06-16",
-      chain: "main",
-      txid: "143a3d7e7599557f9d63e7f224f34d33e9251b2c23c38f95631b3a54de53f024",
-      summary: "Star Wars: A New Hope",
+      blockHeight: 21915,
+      blockHash: "00000000000000163266ba4e1f2e80785dbf4ba283803752a7e8586fd92918ca",
+      summary: "First DeVault superblock funding DAOs.",
       referenceUrl: ""
     },
     {
       type: "tx",
-      date: "2010-05-22",
+      date: "2019-10-10",
       chain: "main",
-      txid: "a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d",
-      summary: "The 'Bitcoin Pizza' transaction.",
-      alertBodyHtml: "This is the famous 'Bitcoin Pizza' transaction.",
-      referenceUrl: "https://bitcointalk.org/index.php?topic=137.0"
-    },
-    {
-      type: "tx",
-      date: "2011-05-18",
-      chain: "main",
-      txid: "5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d",
-      summary: "Destroyed bitcoin.",
-      referenceUrl: "https://bitcointalk.org/index.php?topic=7253.msg184414#msg184414",
-      referenceUrl2: "https://www.reddit.com/r/Bitcoin/comments/7mhoks/til_in_2011_a_user_running_a_modified_mining/"
+      txid: "adab88d353ef243c485c410d676806bd6922e158fdbff4b4ae21a9ab231555bf",
+      summary: "First DeVault ID on-chain registration.",
+      referenceUrl: ""
     },
     {
       type: "blockheight",
-      date: "2009-01-12",
+      date: "2019-12-22",
       chain: "main",
-      blockHeight: 170,
-      blockHash: "00000000d1145790a8694403d4063f323d499e655c83426834d4ce2f8dd4a2ee",
-      summary: "First block containing a (non-coinbase) transaction.",
-      alertBodyHtml: "This block comes 9 days after the genesis block and is the first to contain a transfer of bitcoin. Before this block all blocks contained only coinbase transactions which mint new bitcoin.",
-      referenceUrl: "https://bitcointalk.org/index.php?topic=91806.msg1012234#msg1012234"
+      blockHeight: 131490,
+      blockHash: "0000000000000088fc6bcc99236b888c1d5fa79211726b3ed9378e67732a9679",
+      summary: "The peakening superblock marking the tip of the fin in the DeVaul 'sharkflation' block subsidy distribution model.",
+      alertBodyHtml: "This peakening height was reduced by 66% from it's previous scheduled height. This change decision was made via network governance on the DeVault.Online platform.",
+      referenceUrl: "https://devault.online/proposal/reduce-coin-inflation-by-reducing-time-to-peak-etc"
     },
-    {
-      type:"address",
-      date:"2011-12-03",
-      chain: "main",
-      address:"1JryTePceSiWVpoNBU8SbwiT7J4ghzijzW",
-      summary:"Brainwallet address for 'Satoshi Nakamoto'",
-      referenceUrl:"https://twitter.com/MrHodl/status/1041448002005741568",
-      alertBodyHtml:"This address was generated from the SHA256 hash of 'Satoshi Nakamoto' as example of the 'brainwallet' concept."
-    },
-    {
-      type: "tx",
-      date: "2010-11-14",
-      chain: "main",
-      txid: "e3bf3d07d4b0375638d5f1db5255fe07ba2c4cb067cd81b84ee974b6585fb468",
-      summary: "Duplicated coinbase transaction #1",
-      referenceUrl: "https://bitcoin.stackexchange.com/questions/38994/will-there-be-21-million-bitcoins-eventually/38998#38998",
-      alertBodyHtml: "This is one of 2 'duplicate coinbase' transactions. An early bitcoin bug (fixed by <a href='https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki'>BIP30</a>) allowed identical coinbase transactions - a newer duplicate would overwrite older copies. This transaction was the coinbase transaction for <a href='/block-height/91722'>Block #91,722</a> and, ~16 hours later, <a href='/block-height/91880'>Block #91,880</a>. The 50 BTC claimed as the coinbase for block 91,722 were also overwritten and lost."
-    },
-    {
-      type: "tx",
-      date: "2010-11-14",
-      chain: "main",
-      txid: "d5d27987d2a3dfc724e359870c6644b40e497bdc0589a033220fe15429d88599",
-      summary: "Duplicated coinbase transaction #2",
-      referenceUrl: "https://bitcoin.stackexchange.com/questions/38994/will-there-be-21-million-bitcoins-eventually/38998#38998",
-      alertBodyHtml: "This is one of 2 'duplicate coinbase' transactions. An early bitcoin bug (fixed by <a href='https://github.com/bitcoin/bips/blob/master/bip-0030.mediawiki'>BIP30</a>) allowed identical coinbase transactions - a newer duplicate would overwrite older copies. This transaction was the coinbase transaction for <a href='/block-height/91812'>Block #91,812</a> and, ~3 hours later, <a href='/block-height/91842'>Block #91,842</a>. The 50 BTC claimed as the coinbase for block 91,812 were also overwritten and lost."
-    },
-
 
     // testnet
     {

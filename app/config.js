@@ -173,7 +173,7 @@ module.exports = {
             {name: "DeVault Main Site", url:"https://devault.cc", imgUrl:"/img/logo/dvt.ico"},
             {name: "DeVault Online", url:"https://devault.online", imgUrl:"/img/logo/dvt.svg"},
             {name: "DeVault Forums", url:"https://devaultchat.cc", imgUrl:"/img/logo/dvt.svg"},
-            {name: "DeVault ID", url:"https://devaultid.com", imgUrl:"/img/logo/dvt.svg"},
+            {name: "DeVault ID", url:"https://devaultid.com", imgUrl:"/img/logo/did.png"},
             {name: "DeVault BitDB", url:"https://bitdb.exploredvt.com", imgUrl:"/img/logo/dvt.svg"},
           ]
         }

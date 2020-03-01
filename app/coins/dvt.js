@@ -198,7 +198,7 @@ module.exports = {
       chain: "main",
       txid: "adab88d353ef243c485c410d676806bd6922e158fdbff4b4ae21a9ab231555bf",
       summary: "First DeVault ID on-chain registration.",
-      referenceUrl: ""
+      referenceUrl: "https://devaultid.com"
     },
     {
       type: "blockheight",

@@ -170,9 +170,11 @@ module.exports = {
         {
           title:"Related Sites",
           links:[
-            // TODO: find better images for this URLs, in the mean time use dvt.svg
-            {name: "DeVault Main Site", url:"https://devault.cc", imgUrl:"/img/logo/devault.png"},
+            {name: "DeVault Main Site", url:"https://devault.cc", imgUrl:"/img/logo/dvt.ico"},
             {name: "DeVault Online", url:"https://devault.online", imgUrl:"/img/logo/dvt.svg"},
+            {name: "DeVault Forums", url:"https://devaultchat.cc", imgUrl:"/img/logo/dvt.svg"},
+            {name: "DeVault ID", url:"https://devaultid.com", imgUrl:"/img/logo/dvt.svg"},
+            {name: "DeVault BitDB", url:"https://bitdb.exploredvt.com", imgUrl:"/img/logo/dvt.svg"},
           ]
         }
       ]

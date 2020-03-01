@@ -171,7 +171,7 @@ function loadHistoricalDataForChain(chain) {
           global.specialTransactions[item.txid] = item;
 
         } else if (item.type == "address") {
-          global.specialAddresses[item.address] = {type:"fun", addressInfo:item};
+          global.specialAddresses[item.address] = {type:"history", addressInfo:item};
         }
       }
     });

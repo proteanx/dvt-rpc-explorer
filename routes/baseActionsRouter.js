@@ -1219,7 +1219,7 @@ router.get("/history", function(req, res, next) {
 
   res.locals.historicalData = sortedList;
 
-  res.render("fun");
+  res.render("history");
 
   next();
 });

@@ -2,14 +2,15 @@
 
 [![npm version][npm-ver-img]][npm-ver-url] [![NPM downloads][npm-dl-img]][npm-dl-url]
 
+Forked from sickpig's [bch-rpc-explorer](https://github.com/sickpig/bch-rpc-explorer) (a fork of btc-rpc-explorer for Bitcoin Unlimited)
 
 Simple, database-free DeVault blockchain explorer, via RPC. Built with Node.js, express, bootstrap-v4.
 
-This tool is intended to be a simple, self-hosted explorer for the Bitcoin blockchain, driven by RPC calls to your own bitcoind node. This tool is easy to run but currently lacks features compared to database-backed explorers.
+This tool is intended to be a simple, self-hosted explorer for the DeVault blockchain, driven by RPC calls to your own bitcoind node. This tool is easy to run but currently lacks features compared to database-backed explorers.
 
 Whatever reasons one might have for running a full node (trustlessness, technical curiosity, supporting the network, etc) it's helpful to appreciate the "fullness" of your node. With this explorer, you can not only explore the blockchain (in the traditional sense of the term "explorer"), but also explore the functional capabilities of your own node.
 
-Live demo available at: [https://explorer.bitcoinunlimited.info](https://explorer.bitcoinunlimited.info)
+Live demo available at: [https://exploredvt.com](https://exploredvt.com)
 
 # Features
 
@@ -32,8 +33,8 @@ The below instructions are geared toward DVT, but can be adapted easily to other
 
 ## Prerequisites
 
-1. Install and run a full, archiving node - [instructions](https://bitcoinunlimited.info/download). Ensure that your bitcoin node has full transaction indexing enabled (`txindex=1`) and the RPC server enabled (`server=1`).
-2. Synchronize your node with the Bitcoin network.
+1. Install and run a full, archiving node - [DeVault Releases](https://github.com/devaultcrypto/devault/releases). Ensure that your devault node has full transaction indexing enabled (`txindex=1`) and the RPC server enabled (`server=1`).
+2. Synchronize your node with the DeVault network.
 3. "Recent" version of Node.js (8+ recommended).
 4. You could also run an [ElectrsCash](https://github.com/bitcoinunlimited/ElectrsCash) and configure the explorer to received data from it
 

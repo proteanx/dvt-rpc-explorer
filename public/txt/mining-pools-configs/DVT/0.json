@@ -4,9 +4,13 @@
             "name": "zergpool.com",
             "link": "https://zergpool.com"
         },
-        "bsod.solo": {
+        "bsod": {
             "name": "bsod.pw",
             "link": "https://bsod.pw"
+        },
+        "thepool.life": {
+            "name": "coinstop",
+            "link": "https://coinstop.me"
         },
 	"zpool.ca": {
             "name" : "zpool.ca",
@@ -21,6 +25,10 @@
         "devault:qp3ng86tafmtf9vatx7gp3apqcuu7vuhhczkrn6ufp": {
             "name": "bsod.pw",
             "link": "https://bsod.pw"
+         },
+        "devault:qz4lyynwp02js4zvuuzsadqy8hglp84t3yzuxamqnv": {
+            "name": "coinstop",
+            "link": "https://coinstop.me"
          },
         "devault:qz6fcqx09narru8ux5zqgh2u8mpwg0yv2qk8dkk2nf": {
             "name": "blockmasters.co",

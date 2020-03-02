@@ -46,8 +46,8 @@ module.exports = {
   demoSiteUrl: "https://exploredvt.com",
   miningPoolsConfigUrls:[
   ],
-  maxBlockWeight: 4000000,
-  targetBlockTimeSeconds: 600,
+  maxBlockWeight: 32000000,
+  targetBlockTimeSeconds: 120,
   currencyUnits:currencyUnits,
   currencyUnitsByName:{"DVT":currencyUnits[0], "spocks":currencyUnits[1]},
   baseCurrencyUnit:currencyUnits[1],

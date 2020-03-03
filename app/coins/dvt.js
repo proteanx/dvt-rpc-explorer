@@ -45,6 +45,8 @@ module.exports = {
   nodeUrl:"https://www.github.com/devaultcrypto/devault",
   demoSiteUrl: "https://exploredvt.com",
   miningPoolsConfigUrls:[
+    "https://raw.githubusercontent.com/proteanx/dvt-rpc-explorer/master/public/txt/mining-pools-configs/DVT/0.json",
+    "https://raw.githubusercontent.com/proteanx/dvt-rpc-explorer/master/public/txt/mining-pools-configs/DVT/1.json"
   ],
   maxBlockWeight: 32000000,
   targetBlockTimeSeconds: 120,

@@ -23,14 +23,6 @@ Live demo available at: [https://exploredvt.com](https://exploredvt.com)
 * Mempool summary, with fee, size, and age breakdowns
 * RPC command browser and terminal
 
-# Changelog / Release notes
-
-See [CHANGELOG.md](/CHANGELOG.md).
-
-# Getting started
-
-The below instructions are geared toward DVT, but can be adapted easily to other coins.
-
 ## Prerequisites
 
 1. Install and run a full, archiving node - [DeVault Releases](https://github.com/devaultcrypto/devault/releases). Ensure that your devault node has full transaction indexing enabled (`txindex=1`) and the RPC server enabled (`server=1`).
@@ -61,15 +53,10 @@ See [.env-sample](.env-sample) for a list of the options and details for formatt
 You may also pass options as CLI arguments, for example:
 
 ```bash
-dvt-rpc-explorer --port 8080 --bitcoind-port 18443 --bitcoind-cookie ~/.bitcoin/regtest/.cookie
+dvt-rpc-explorer --port 8080 --bitcoind-port 18443 --bitcoind-cookie ~/.devault/regtest/.cookie
 ```
 
 See `dvt-rpc-explorer --help` for the full list of CLI options.
-
-## Run via Docker
-
-1. `docker build -t dvt-rpc-explorer .`
-2. `docker run -p 3002:3002 -it dvt-rpc-explorer`
 
 # Support
 

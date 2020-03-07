@@ -207,6 +207,15 @@ function formatValueInActiveCurrency(amount) {
   }
 }
 
+function formatValueInActiveCurrency2(amount) {
+  if (global.currencyFormatType && global.exchangeRates[global.currencyFormatType.toLowerCase()]) {
+    return formatExchangedCurrency2(amount, global.currencyFormatType);
+
+  } else {
+    return formatExchangedCurrency2(amount, "usd");
+  }
+}
+
 function satoshisPerUnitOfActiveCurrency() {
   if (global.currencyFormatType != null && global.exchangeRates != null) {
     var exchangeType = global.currencyFormatType.toLowerCase();
@@ -255,6 +264,24 @@ function formatExchangedCurrency(amount, exchangeType) {
     var dec = new Decimal(amount);
     dec = dec.times(global.exchangeRates[exchangeType.toLowerCase()]);
     var exchangedAmt = dec.toFixed(5);
+
+    if (exchangeType == "eur") {
+      return "€" + addThousandsSeparators(exchangedAmt);
+
+    } else {
+      return "$" + addThousandsSeparators(exchangedAmt);
+    }
+
+  }
+
+  return "";
+}
+
+function formatExchangedCurrency2(amount, exchangeType) {
+  if (global.exchangeRates != null && global.exchangeRates[exchangeType.toLowerCase()] != null) {
+    var dec = new Decimal(amount);
+    dec = dec.times(global.exchangeRates[exchangeType.toLowerCase()]);
+    var exchangedAmt = dec.toFixed(2);
 
     if (exchangeType == "eur") {
       return "€" + addThousandsSeparators(exchangedAmt);
